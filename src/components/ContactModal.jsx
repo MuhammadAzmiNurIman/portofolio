@@ -7,18 +7,26 @@ export function ContactModal({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
       onClose();
-    }, 2000);
+      setFormData({ name: '', email: '', message: '' });
+    }, 3000);
   };
 
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+        {/* Hidden iframe to receive form submission smoothly without CORS restriction or page reload */}
+        <iframe 
+          name="formsubmit_iframe" 
+          id="formsubmit_iframe" 
+          className="hidden"
+          style={{ display: 'none' }}
+        />
+
         <motion.div 
           initial={{ scale: 0.9, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -45,14 +53,28 @@ export function ContactModal({ isOpen, onClose }) {
             <div className="bg-primary-fixed border-4 border-black p-6 text-center my-4 shadow-[4px_4px_0px_0px_#000]">
               <span className="material-symbols-outlined text-4xl text-primary mb-2">check_circle</span>
               <p className="font-display font-bold text-lg uppercase text-black">Message Transmitted!</p>
-              <p className="font-body text-sm text-black/80 mt-1">Azmi will get back to you shortly.</p>
+              <p className="font-body text-sm text-black/80 mt-1">
+                Thank you! Azmi will get back to you shortly.
+              </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <form 
+              action="https://formsubmit.co/muhammad.azmi.iman@gmail.com" 
+              method="POST"
+              target="formsubmit_iframe"
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-4"
+            >
+              {/* FormSubmit Configurations */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_subject" value={`New Portfolio Message from ${formData.name || 'Visitor'}`} />
+
               <div>
                 <label className="block font-display text-sm font-bold uppercase mb-1">Your Name</label>
                 <input 
                   required
+                  name="name"
                   type="text"
                   placeholder="JOHN DOE"
                   value={formData.name}
@@ -65,6 +87,7 @@ export function ContactModal({ isOpen, onClose }) {
                 <label className="block font-display text-sm font-bold uppercase mb-1">Your Email</label>
                 <input 
                   required
+                  name="email"
                   type="email"
                   placeholder="JOHN@EXAMPLE.COM"
                   value={formData.email}
@@ -77,6 +100,7 @@ export function ContactModal({ isOpen, onClose }) {
                 <label className="block font-display text-sm font-bold uppercase mb-1">Project Details</label>
                 <textarea 
                   required
+                  name="message"
                   rows={4}
                   placeholder="TELL ME ABOUT YOUR PROJECT REQUIREMENTS..."
                   value={formData.message}
@@ -89,7 +113,7 @@ export function ContactModal({ isOpen, onClose }) {
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="mt-2 bg-primary text-white font-display font-extrabold text-base uppercase px-6 py-3 border-4 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] transition-all flex items-center justify-center gap-2"
+                className="mt-2 bg-primary text-white font-display font-extrabold text-base uppercase px-6 py-3 border-4 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 SEND MESSAGE <span className="material-symbols-outlined">send</span>
               </motion.button>
