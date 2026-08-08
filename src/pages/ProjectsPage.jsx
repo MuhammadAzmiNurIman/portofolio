@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 
-export function ProjectsPage({ onSelectProject }) {
+export function ProjectsPage({ onSelectProject, onOpenContact }) {
   const { projects, profile } = portfolioData;
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -23,6 +23,8 @@ export function ProjectsPage({ onSelectProject }) {
 
     return matchesCategory && matchesSearch;
   });
+
+  const activeCategoryLabel = filterOptions.find(f => f.id === activeFilter)?.label || 'Category';
 
   return (
     <div className="flex flex-col w-full bg-background min-h-screen border-x-4 border-black max-w-[1440px] mx-auto">
@@ -106,17 +108,69 @@ export function ProjectsPage({ onSelectProject }) {
       {/* Project Grid */}
       <section className="w-full p-md md:p-xl bg-background min-h-[50vh]">
         {filteredProjects.length === 0 ? (
-          <div className="bg-white border-4 border-black p-xl text-center shadow-[8px_8px_0px_0px_#000]">
-            <span className="material-symbols-outlined text-5xl text-primary mb-2">search_off</span>
-            <h3 className="font-display font-extrabold text-2xl uppercase">No matching projects found</h3>
-            <p className="font-body text-secondary mt-1">Try resetting search filters or keywords.</p>
-            <button
-              onClick={() => { setActiveFilter('all'); setSearchQuery(''); }}
-              className="mt-4 bg-primary text-white border-4 border-black px-md py-xs font-display font-bold text-sm uppercase shadow-[4px_4px_0px_0px_#000]"
-            >
-              Reset Filters
-            </button>
-          </div>
+          activeFilter !== 'all' && searchQuery === '' ? (
+            /* Under Construction State for Empty Category */
+            <div className="bg-white border-4 border-black p-8 md:p-12 shadow-[10px_10px_0px_0px_#000] max-w-3xl mx-auto my-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-primary-fixed text-black font-display font-black text-xs uppercase px-4 py-1.5 border-b-4 border-l-4 border-black flex items-center gap-2">
+                <span className="w-2.5 h-2.5 bg-primary rounded-full animate-ping"></span>
+                <span>IN DEVELOPMENT</span>
+              </div>
+
+              <div className="w-16 h-16 bg-primary text-white border-4 border-black flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#000]">
+                <span className="material-symbols-outlined text-3xl font-bold">construction</span>
+              </div>
+
+              <div className="inline-block bg-primary text-white border-2 border-black px-3 py-1 mb-3 shadow-[3px_3px_0px_0px_#000] transform -rotate-1">
+                <span className="font-display font-extrabold uppercase text-xs tracking-widest">
+                  {activeCategoryLabel} • COMING SOON
+                </span>
+              </div>
+
+              <h3 className="font-display font-black text-3xl md:text-4xl uppercase text-black mb-3">
+                PROJECTS UNDER CONSTRUCTION
+              </h3>
+
+              <p className="font-body text-base md:text-lg text-secondary mb-8 max-w-xl leading-relaxed">
+                Case studies and design experiments for <strong>{activeCategoryLabel}</strong> are currently being crafted, documented, and polished. Stay tuned for upcoming updates!
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4">
+                <button
+                  onClick={() => { setActiveFilter('all'); setSearchQuery(''); }}
+                  className="bg-primary text-white border-4 border-black px-6 py-3 font-display font-extrabold text-sm uppercase shadow-[4px_4px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] transition-all flex items-center gap-2"
+                >
+                  <span className="material-symbols-outlined font-bold text-base">apps</span>
+                  EXPLORE ALL PROJECTS
+                </button>
+
+                {onOpenContact && (
+                  <button
+                    onClick={onOpenContact}
+                    className="bg-white text-black border-4 border-black px-6 py-3 font-display font-extrabold text-sm uppercase shadow-[4px_4px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] transition-all flex items-center gap-2"
+                  >
+                    <span className="material-symbols-outlined font-bold text-base">mail</span>
+                    INQUIRE CUSTOM PROJECT
+                  </button>
+                )}
+              </div>
+            </div>
+          ) : (
+            /* Search Empty State */
+            <div className="bg-white border-4 border-black p-8 md:p-12 text-center shadow-[8px_8px_0px_0px_#000] max-w-2xl mx-auto my-8">
+              <span className="material-symbols-outlined text-5xl text-primary mb-2">search_off</span>
+              <h3 className="font-display font-black text-2xl uppercase text-black">NO MATCHING PROJECTS FOUND</h3>
+              <p className="font-body text-secondary mt-1 mb-6">
+                No results found for "{searchQuery}". Try resetting search filters or keywords.
+              </p>
+              <button
+                onClick={() => { setActiveFilter('all'); setSearchQuery(''); }}
+                className="bg-primary text-white border-4 border-black px-6 py-3 font-display font-extrabold text-sm uppercase shadow-[4px_4px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] transition-all inline-flex items-center gap-2"
+              >
+                <span className="material-symbols-outlined text-base font-bold">restart_alt</span>
+                RESET FILTERS
+              </button>
+            </div>
+          )
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
             {filteredProjects.map((project) => (

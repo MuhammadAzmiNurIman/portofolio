@@ -128,6 +128,7 @@ export function App() {
             >
               <ProjectsPage
                 onSelectProject={handleSelectProject}
+                onOpenContact={() => setContactOpen(true)}
               />
             </motion.div>
           )}
