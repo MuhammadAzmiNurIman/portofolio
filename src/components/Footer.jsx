@@ -3,17 +3,21 @@ import { portfolioData } from '../data/portfolioData';
 
 export function Footer({ onOpenContact }) {
   const marqueeItems = [
-    "Available for Freelance",
+    "Open for Hiring & Collaboration",
     "✦",
-    "Built with Neobrutalism",
+    "Software Engineer | Full Stack Specialist",
     "✦",
-    "2024 Design Portfolio",
+    "Delivering High-Impact Digital Products",
     "✦",
-    "Available for Freelance",
+    "Proven Engineering Track Record",
     "✦",
-    "Built with Neobrutalism",
+    "Open for Hiring & Collaboration",
     "✦",
-    "2024 Design Portfolio",
+    "Software Engineer | Full Stack Specialist",
+    "✦",
+    "Delivering High-Impact Digital Products",
+    "✦",
+    "Proven Engineering Track Record",
     "✦"
   ];
 
@@ -89,7 +93,7 @@ export function Footer({ onOpenContact }) {
               </div>
               <div>
                 <span className="inline-block bg-primary text-white font-display text-[10px] font-black uppercase px-2 py-0.5 border border-black shadow-[2px_2px_0px_0px_#000] mb-1">
-                  PORTFOLIO LEAD
+                  SOFTWARE ENGINEER & FULL STACK
                 </span>
                 <h3 className="font-display font-black text-xl text-black uppercase tracking-tight">
                   {portfolioData.profile.name}
