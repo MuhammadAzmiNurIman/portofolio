@@ -3,29 +3,95 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export function ContactModal({ isOpen, onClose }) {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   if (!isOpen) return null;
 
-  const handleSubmit = () => {
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      onClose();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+
+    try {
+      const payload = new FormData();
+      payload.append('name', formData.name);
+      payload.append('email', formData.email);
+      payload.append('message', formData.message);
+      payload.append('_captcha', 'false');
+      payload.append('_template', 'table');
+      payload.append('_subject', `New Portfolio Message from ${formData.name}`);
+
+      const response = await fetch("https://formsubmit.co/ajax/muhammad.azmi.iman@gmail.com", {
+        method: "POST",
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: payload
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success !== "false") {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => {
+          setSubmitted(false);
+          onClose();
+        }, 3500);
+      } else {
+        throw new Error(data.message || 'Failed to submit form');
+      }
+    } catch (err) {
+      console.error("Form submit error, using native fallback:", err);
+      triggerNativeFallback();
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const triggerNativeFallback = () => {
+    const form = document.getElementById('native_contact_form');
+    if (form) {
+      form.submit();
+      setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+      setTimeout(() => {
+        setSubmitted(false);
+        onClose();
+      }, 3500);
+    } else {
+      setError('Failed to send message. Please try again later.');
+    }
   };
 
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
-        {/* Hidden iframe to receive form submission smoothly without CORS restriction or page reload */}
         <iframe 
           name="formsubmit_iframe" 
           id="formsubmit_iframe" 
           className="hidden"
           style={{ display: 'none' }}
         />
+
+        {/* Hidden native form for fallback */}
+        <form 
+          id="native_contact_form"
+          action="https://formsubmit.co/muhammad.azmi.iman@gmail.com" 
+          method="POST" 
+          target="formsubmit_iframe" 
+          className="hidden"
+          style={{ display: 'none' }}
+        >
+          <input type="hidden" name="name" value={formData.name} />
+          <input type="hidden" name="email" value={formData.email} />
+          <input type="hidden" name="message" value={formData.message} />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value={`New Portfolio Message from ${formData.name}`} />
+        </form>
 
         <motion.div 
           initial={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -36,7 +102,8 @@ export function ContactModal({ isOpen, onClose }) {
           {/* Close button */}
           <button 
             onClick={onClose}
-            className="absolute top-4 right-4 bg-primary text-white border-2 border-black p-1 shadow-[2px_2px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all"
+            disabled={loading}
+            className="absolute top-4 right-4 bg-primary text-white border-2 border-black p-1 shadow-[2px_2px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all disabled:opacity-50"
           >
             <span className="material-symbols-outlined font-bold">close</span>
           </button>
@@ -58,28 +125,23 @@ export function ContactModal({ isOpen, onClose }) {
               </p>
             </div>
           ) : (
-            <form 
-              action="https://formsubmit.co/muhammad.azmi.iman@gmail.com" 
-              method="POST"
-              target="formsubmit_iframe"
-              onSubmit={handleSubmit}
-              className="flex flex-col gap-4"
-            >
-              {/* FormSubmit Configurations */}
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_subject" value={`New Portfolio Message from ${formData.name || 'Visitor'}`} />
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              {error && (
+                <div className="bg-red-100 border-2 border-red-600 text-red-700 p-3 text-xs font-bold font-body">
+                  {error}
+                </div>
+              )}
 
               <div>
                 <label className="block font-display text-sm font-bold uppercase mb-1">Your Name</label>
                 <input 
                   required
-                  name="name"
                   type="text"
                   placeholder="JOHN DOE"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-surface border-4 border-black px-4 py-2 font-body shadow-[4px_4px_0px_0px_#000] focus:outline-none focus:bg-primary-fixed transition-colors"
+                  disabled={loading}
+                  className="w-full bg-surface border-4 border-black px-4 py-2 font-body shadow-[4px_4px_0px_0px_#000] focus:outline-none focus:bg-primary-fixed transition-colors disabled:opacity-50"
                 />
               </div>
 
@@ -87,12 +149,12 @@ export function ContactModal({ isOpen, onClose }) {
                 <label className="block font-display text-sm font-bold uppercase mb-1">Your Email</label>
                 <input 
                   required
-                  name="email"
                   type="email"
                   placeholder="JOHN@EXAMPLE.COM"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-surface border-4 border-black px-4 py-2 font-body shadow-[4px_4px_0px_0px_#000] focus:outline-none focus:bg-primary-fixed transition-colors"
+                  disabled={loading}
+                  className="w-full bg-surface border-4 border-black px-4 py-2 font-body shadow-[4px_4px_0px_0px_#000] focus:outline-none focus:bg-primary-fixed transition-colors disabled:opacity-50"
                 />
               </div>
 
@@ -100,22 +162,31 @@ export function ContactModal({ isOpen, onClose }) {
                 <label className="block font-display text-sm font-bold uppercase mb-1">Project Details</label>
                 <textarea 
                   required
-                  name="message"
                   rows={4}
                   placeholder="TELL ME ABOUT YOUR PROJECT REQUIREMENTS..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-surface border-4 border-black px-4 py-2 font-body shadow-[4px_4px_0px_0px_#000] focus:outline-none focus:bg-primary-fixed transition-colors"
+                  disabled={loading}
+                  className="w-full bg-surface border-4 border-black px-4 py-2 font-body shadow-[4px_4px_0px_0px_#000] focus:outline-none focus:bg-primary-fixed transition-colors disabled:opacity-50"
                 />
               </div>
 
               <motion.button 
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ scale: loading ? 1 : 1.01 }}
+                whileTap={{ scale: loading ? 1 : 0.98 }}
                 type="submit"
-                className="mt-2 bg-primary text-white font-display font-extrabold text-base uppercase px-6 py-3 border-4 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                disabled={loading}
+                className="mt-2 bg-primary text-white font-display font-extrabold text-base uppercase px-6 py-3 border-4 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] transition-all flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
               >
-                SEND MESSAGE <span className="material-symbols-outlined">send</span>
+                {loading ? (
+                  <>
+                    SENDING... <span className="material-symbols-outlined animate-spin">progress_activity</span>
+                  </>
+                ) : (
+                  <>
+                    SEND MESSAGE <span className="material-symbols-outlined">send</span>
+                  </>
+                )}
               </motion.button>
             </form>
           )}
