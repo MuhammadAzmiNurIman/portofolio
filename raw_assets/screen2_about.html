@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.marquee-container{overflow:hidden;white-space:nowrap;}.marquee-content{display:inline-block;animation:marquee 20s linear infinite;}@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-surface":"#303030","error-container":"#ffdad6","secondary-fixed-dim":"#b9c7e4","on-primary-container":"#a5bdff","outline-variant":"#c3c6d5","surface":"#f9f9f9","surface-container-highest":"#e2e2e2","secondary":"#515f78","primary-fixed":"#dae2ff","on-secondary-fixed":"#0d1c32","on-error-container":"#93000a","tertiary-fixed":"#dbe4e8","tertiary-container":"#464f52","surface-variant":"#e2e2e2","on-error":"#ffffff","on-tertiary":"#ffffff","on-surface":"#1b1b1b","surface-dim":"#dadada","surface-bright":"#f9f9f9","on-tertiary-fixed":"#141d20","inverse-primary":"#b1c5ff","on-background":"#1b1b1b","on-primary":"#ffffff","surface-tint":"#2559bd","on-primary-fixed-variant":"#00419e","inverse-on-surface":"#f1f1f1","tertiary-fixed-dim":"#bfc8cc","background":"#f9f9f9","tertiary":"#2f383b","on-secondary":"#ffffff","surface-container-low":"#f3f3f3","on-tertiary-container":"#b7c0c4","surface-container-lowest":"#ffffff","surface-container-high":"#e8e8e8","on-primary-fixed":"#001946","on-tertiary-fixed-variant":"#3f484b","error":"#ba1a1a","secondary-container":"#d2e0fe","surface-container":"#eeeeee","on-secondary-fixed-variant":"#39475f","outline":"#737784","primary-container":"#0047ab","on-surface-variant":"#434653","secondary-fixed":"#d6e3ff","on-secondary-container":"#55637d","primary-fixed-dim":"#b1c5ff","primary":"#00327d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"32px","base":"4px","gutter":"24px","sm":"16px","xs":"8px","md":"24px","lg":"40px","xl":"64px"},"fontFamily":{"body-lg":["Archivo Narrow"],"headline-lg":["Lexend"],"label-bold":["Archivo Narrow"],"display":["Lexend"],"headline-lg-mobile":["Lexend"],"headline-md":["Lexend"],"body-md":["Archivo Narrow"]},"fontSize":{"body-lg":["18px",{"lineHeight":"1.5","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"1.2","fontWeight":"700"}],"label-bold":["14px",{"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"700"}],"display":["48px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg-mobile":["24px",{"lineHeight":"1.2","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"1.3","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.5","fontWeight":"400"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@100..900&amp;family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"></head><body class="bg-background font-body-md text-on-surface"><header class="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"><div class="h-20 w-full px-md flex items-center justify-between"><div class="flex items-center gap-sm"><div class="border-4 border-black p-1 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"><img alt="Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP7qe9CONC5kZ7n8dyGMqzuRQAlZ4Dlvdi99CEOiOWxmrOAST-7LcIrsjrYelINbvh5ZpGwInmOOGCXa-Dn2J_02WRHr7VNxMD37eEtUlce2UBunDdoHrureT0XJ6brCK2Q_90ErfN8D0Ia5fi3I8jjayr_jK5TbKZs8nObHYkEZ9LF3c8w-zWxWDegtlSduly-mSc11yjWuqAftoJ2D7bPOxTVL987igvf4inv_gRiz6tk80lRIgfwQ"></div><span class="font-display text-headline-md uppercase tracking-tighter">Creative Portfolio</span></div><nav class="hidden md:flex items-center gap-sm" data-active-classes="translate-x-[4px] translate-y-[4px] shadow-none"><a class="bg-primary text-on-primary border-4 border-black px-sm py-2 font-display text-label-bold uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all" data-path="home" href="#">Home</a><a aria-current="page" class="bg-primary text-on-primary border-4 border-black px-sm py-2 font-display text-label-bold uppercase transition-all translate-x-[4px] translate-y-[4px] shadow-none" data-path="about" href="#">About</a><a class="bg-primary text-on-primary border-4 border-black px-sm py-2 font-display text-label-bold uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all" data-path="projects" href="#">Projects</a><a class="bg-primary text-on-primary border-4 border-black px-sm py-2 font-display text-label-bold uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all" data-path="contact" href="#">Contact</a></nav></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full bg-background min-h-screen text-on-surface">
+<!-- Hero Section -->
+<section class="relative w-full border-b-[4px] border-black bg-primary flex flex-col items-center justify-center py-xl overflow-hidden shadow-[0_6px_0_0_#000]">
+<!-- Diagonal black grid lines pattern -->
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000); background-size: 20px 20px; background-position: 0 0, 10px 10px;"></div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-md text-center">
+<div class="inline-block bg-white border-[4px] border-black px-md py-xs mb-sm shadow-[6px_6px_0_0_#000] transform -rotate-2">
+<span class="font-display text-label-bold uppercase text-primary tracking-widest">About the Creator</span>
+</div>
+<h1 class="font-display text-[64px] md:text-[96px] leading-[1] font-black text-on-primary uppercase tracking-tighter mix-blend-difference drop-shadow-[4px_4px_0_#000]">
+                My Journey <br><span class="text-secondary-fixed">And Skills</span>
+</h1>
+</div>
+</section>
+<!-- Bio Section -->
+<section class="w-full max-w-7xl mx-auto px-md py-xl grid grid-cols-1 lg:grid-cols-12 gap-lg relative z-20">
+<!-- Left: Bio Card -->
+<div class="lg:col-span-7 flex flex-col justify-center">
+<div class="bg-white border-[4px] border-black p-md md:p-lg shadow-[8px_8px_0_0_var(--tw-colors-primary)] relative transform hover:-translate-y-1 hover:shadow-[12px_12px_0_0_var(--tw-colors-primary)] transition-all duration-300">
+<div class="absolute -top-6 -left-6 bg-secondary-fixed border-[4px] border-black w-12 h-12 flex items-center justify-center rounded-full shadow-[4px_4px_0_0_#000]">
+<span class="material-symbols-outlined font-black text-black">waving_hand</span>
+</div>
+<h2 class="font-display text-headline-lg uppercase border-b-[4px] border-black pb-xs mb-md">Hello, I'm Muhammad.</h2>
+<div class="font-body-lg text-on-surface space-y-sm">
+<p>I am a passionate web developer focused on crafting robust, scalable, and visually striking digital experiences. My approach blends rigorous engineering principles with unapologetic design systems.</p>
+<p>Over the years, I've transitioned from curious tinkering to architectural problem-solving, building platforms that prioritize performance without sacrificing bold aesthetic statements.</p>
+<p>I thrive in environments where creativity meets constraint, utilizing Neobrutalism and high-contrast layouts to ensure absolute clarity and visceral impact.</p>
+</div>
+<div class="mt-md pt-sm border-t-[4px] border-black flex flex-wrap gap-xs">
+<span class="bg-primary-fixed border-[2px] border-black px-xs py-1 font-label-bold uppercase text-black">Problem Solver</span>
+<span class="bg-inverse-primary border-[2px] border-black px-xs py-1 font-label-bold uppercase text-black">Design Advocate</span>
+<span class="bg-secondary-fixed border-[2px] border-black px-xs py-1 font-label-bold uppercase text-black">Performance Freak</span>
+</div>
+</div>
+</div>
+<!-- Right: Portrait -->
+<div class="lg:col-span-5 relative group">
+<div class="relative w-full aspect-square bg-surface-container border-[4px] border-black p-2 shadow-[8px_8px_0_0_#000] z-10 transform rotate-2 group-hover:rotate-0 transition-transform duration-300">
+<img alt="Muhammad Azmi Portrait" class="w-full h-full object-cover border-[4px] border-black filter grayscale-[20%] contrast-125" src="https://lh3.googleusercontent.com/aida/AP1WRLuB4egNwFNhIFqMNctqg3D8z_RqDeyGtZ6utRa53SF_p2BT9uUTgbn-zBpqc-9-Zavdnf2y7-BAtUR81HjRkZFlvQC01Gfs2gxm6SS36rZ5wJApRkIysrHpdBjFYE5ROpCDaiXfTZDXnnX5M-mhvFHrKweeBbGzf5wuiitwWD6WmCTHrlKJbrOSX7TGwLTwtClH89_rLJHQqBa59wSCzT8WFw0Bhp_HjZzNMt0fTEl2r1kHLrxk8wpVogE">
+<!-- Sticker Accents -->
+<div class="absolute -top-4 -right-4 bg-secondary-fixed border-[4px] border-black px-sm py-1 shadow-[4px_4px_0_0_#000] transform rotate-12 font-display text-label-bold uppercase">
+                    Available for Work
+                </div>
+<div class="absolute bottom-4 -left-4 bg-primary text-white border-[4px] border-black px-sm py-1 shadow-[4px_4px_0_0_#000] transform -rotate-6 font-display text-label-bold uppercase">
+                    Est. 199X
+                </div>
+</div>
+<!-- Decorative backdrop block -->
+<div class="absolute inset-0 bg-primary translate-x-4 translate-y-4 border-[4px] border-black z-0"></div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="w-full bg-surface-container-high border-y-[4px] border-black py-xl">
+<div class="max-w-7xl mx-auto px-md">
+<div class="flex items-center justify-between mb-lg border-b-[4px] border-black pb-xs">
+<h2 class="font-display text-display uppercase tracking-tight">Core Competencies</h2>
+<span class="material-symbols-outlined text-[48px]">terminal</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Highlighted Skill -->
+<div class="bg-primary text-on-primary border-[4px] border-black p-sm flex flex-col justify-between min-h-[240px] shadow-[6px_6px_0_0_#000] transform -translate-y-2">
+<div>
+<div class="w-12 h-12 bg-white border-[4px] border-black flex items-center justify-center mb-sm shadow-[4px_4px_0_0_#000]">
+<span class="material-symbols-outlined text-black font-bold">code</span>
+</div>
+<h3 class="font-display text-headline-md uppercase mb-xs">Web Development</h3>
+<p class="font-body-md text-primary-fixed">Building accessible, responsive, and performant web applications from the ground up.</p>
+</div>
+<div class="mt-auto font-display text-label-bold">01 // CORE</div>
+</div>
+<!-- Skill 2 -->
+<div class="bg-white text-on-surface border-[4px] border-black p-sm flex flex-col justify-between min-h-[240px] shadow-[6px_6px_0_0_#000] hover:bg-surface-dim transition-colors">
+<div>
+<div class="w-12 h-12 bg-secondary-fixed border-[4px] border-black flex items-center justify-center mb-sm shadow-[4px_4px_0_0_#000]">
+<span class="material-symbols-outlined text-black font-bold">architecture</span>
+</div>
+<h3 class="font-display text-headline-md uppercase mb-xs">System Architecture</h3>
+<p class="font-body-md text-on-surface-variant">Designing scalable backend services and resilient microservices architectures.</p>
+</div>
+<div class="mt-auto font-display text-label-bold text-outline">02 // ARCH</div>
+</div>
+<!-- Skill 3 -->
+<div class="bg-white text-on-surface border-[4px] border-black p-sm flex flex-col justify-between min-h-[240px] shadow-[6px_6px_0_0_#000] hover:bg-surface-dim transition-colors">
+<div>
+<div class="w-12 h-12 bg-inverse-primary border-[4px] border-black flex items-center justify-center mb-sm shadow-[4px_4px_0_0_#000]">
+<span class="material-symbols-outlined text-black font-bold">design_services</span>
+</div>
+<h3 class="font-display text-headline-md uppercase mb-xs">UI/UX Integration</h3>
+<p class="font-body-md text-on-surface-variant">Translating complex design systems into pixel-perfect, interactive components.</p>
+</div>
+<div class="mt-auto font-display text-label-bold text-outline">03 // FRONTEND</div>
+</div>
+<!-- Skill 4 -->
+<div class="bg-white text-on-surface border-[4px] border-black p-sm flex flex-col justify-between min-h-[240px] shadow-[6px_6px_0_0_#000] hover:bg-surface-dim transition-colors">
+<div>
+<div class="w-12 h-12 bg-primary-fixed border-[4px] border-black flex items-center justify-center mb-sm shadow-[4px_4px_0_0_#000]">
+<span class="material-symbols-outlined text-black font-bold">database</span>
+</div>
+<h3 class="font-display text-headline-md uppercase mb-xs">Infrastructure</h3>
+<p class="font-body-md text-on-surface-variant">Managing cloud deployments, CI/CD pipelines, and database optimization.</p>
+</div>
+<div class="mt-auto font-display text-label-bold text-outline">04 // OPS</div>
+</div>
+</div>
+<!-- Tech Stack Tags -->
+<div class="mt-lg pt-md border-t-[4px] border-black">
+<h4 class="font-display text-headline-md uppercase mb-sm">Technology Stack</h4>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-white border-[2px] border-black px-sm py-1 font-label-bold uppercase shadow-[2px_2px_0_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-default">React / Next.js</span>
+<span class="bg-white border-[2px] border-black px-sm py-1 font-label-bold uppercase shadow-[2px_2px_0_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-default">TypeScript</span>
+<span class="bg-white border-[2px] border-black px-sm py-1 font-label-bold uppercase shadow-[2px_2px_0_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-default">Node.js</span>
+<span class="bg-white border-[2px] border-black px-sm py-1 font-label-bold uppercase shadow-[2px_2px_0_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-default">PostgreSQL</span>
+<span class="bg-white border-[2px] border-black px-sm py-1 font-label-bold uppercase shadow-[2px_2px_0_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-default">Tailwind CSS</span>
+<span class="bg-primary text-white border-[2px] border-black px-sm py-1 font-label-bold uppercase shadow-[2px_2px_0_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-default">AWS / Docker</span>
+<span class="bg-secondary-fixed border-[2px] border-black px-sm py-1 font-label-bold uppercase shadow-[2px_2px_0_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-default">GraphQL</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="w-full max-w-7xl mx-auto px-md py-xl">
+<h2 class="font-display text-display uppercase tracking-tight mb-xl text-center bg-primary text-white inline-block px-md py-xs border-[4px] border-black shadow-[8px_8px_0_0_#000] transform -rotate-1 mx-auto relative left-1/2 -translate-x-1/2">Work History</h2>
+<div class="relative pl-sm md:pl-0">
+<!-- Vertical Line -->
+<div class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-[8px] bg-black -translate-x-1/2 z-0"></div>
+<div class="space-y-xl">
+<!-- Timeline Item 1 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group">
+<!-- Node -->
+<div class="absolute left-[28px] md:left-1/2 w-12 h-12 bg-primary border-[4px] border-black rounded-full -translate-x-1/2 flex items-center justify-center z-10 shadow-[4px_4px_0_0_#000] group-hover:scale-110 transition-transform">
+<div class="w-4 h-4 bg-white rounded-full"></div>
+</div>
+<div class="w-full md:w-[45%] pl-xl md:pl-0 md:text-right mb-sm md:mb-0">
+<h3 class="font-display text-headline-lg uppercase">Senior Engineer</h3>
+<p class="font-body-lg text-primary font-bold">TechCorp Solutions // 2021 - Present</p>
+</div>
+<div class="w-full md:w-[45%] pl-xl md:pl-0">
+<div class="bg-white border-[4px] border-black p-sm shadow-[6px_6px_0_0_#000]">
+<p class="font-body-md">Led a team of 5 developers in architecting a high-traffic e-commerce platform. Implemented Neobrutalist design systems and improved core web vitals by 40%.</p>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center justify-between w-full group">
+<div class="absolute left-[28px] md:left-1/2 w-12 h-12 bg-white border-[4px] border-black rounded-full -translate-x-1/2 flex items-center justify-center z-10 shadow-[4px_4px_0_0_#000] group-hover:scale-110 transition-transform">
+<div class="w-4 h-4 bg-black rounded-full"></div>
+</div>
+<div class="w-full md:w-[45%] pl-xl md:pl-0 mb-sm md:mb-0">
+<h3 class="font-display text-headline-lg uppercase">Full Stack Dev</h3>
+<p class="font-body-lg text-secondary font-bold">Innovate Agency // 2018 - 2021</p>
+</div>
+<div class="w-full md:w-[45%] pl-xl md:pl-0 md:text-right">
+<div class="bg-secondary-fixed border-[4px] border-black p-sm shadow-[6px_6px_0_0_#000]">
+<p class="font-body-md text-on-surface">Developed and deployed multiple client portals using React and Node.js. Championed accessibility standards across all major deliverables.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Awards -->
+<section class="w-full bg-surface border-t-[4px] border-black py-xl relative overflow-hidden">
+<!-- Abstract background shape -->
+<div class="absolute -right-20 -top-20 w-96 h-96 bg-primary-fixed rounded-full blur-[100px] opacity-50 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-md relative z-10">
+<h2 class="font-display text-headline-lg uppercase border-b-[8px] border-black pb-xs mb-lg inline-block">Education &amp; Awards</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Certificate 1 -->
+<div class="bg-[#FFFDF5] border-[4px] border-black p-md relative shadow-[8px_8px_0_0_#000] before:content-[''] before:absolute before:inset-2 before:border-[2px] before:border-dashed before:border-black before:pointer-events-none">
+<div class="absolute -top-4 -right-4 bg-primary text-white border-[4px] border-black w-16 h-16 rounded-full flex items-center justify-center shadow-[4px_4px_0_0_#000] transform rotate-12">
+<span class="material-symbols-outlined text-[32px]">workspace_premium</span>
+</div>
+<div class="text-center mt-sm">
+<span class="font-display text-label-bold uppercase tracking-widest text-secondary block mb-xs">B.S. Computer Science</span>
+<h3 class="font-display text-headline-md uppercase font-black text-black mb-xs">University of Technology</h3>
+<div class="w-16 h-[4px] bg-black mx-auto my-xs"></div>
+<p class="font-body-md font-bold">Class of 2018 • Summa Cum Laude</p>
+<p class="font-body-md mt-sm text-outline">Specialized in Software Engineering and Human-Computer Interaction.</p>
+</div>
+</div>
+<!-- Certificate 2 -->
+<div class="bg-[#FFFDF5] border-[4px] border-black p-md relative shadow-[8px_8px_0_0_#000] before:content-[''] before:absolute before:inset-2 before:border-[2px] before:border-dashed before:border-black before:pointer-events-none">
+<div class="absolute -top-4 -right-4 bg-secondary-fixed text-black border-[4px] border-black w-16 h-16 rounded-full flex items-center justify-center shadow-[4px_4px_0_0_#000] transform -rotate-12">
+<span class="material-symbols-outlined text-[32px]">military_tech</span>
+</div>
+<div class="text-center mt-sm">
+<span class="font-display text-label-bold uppercase tracking-widest text-secondary block mb-xs">Award of Excellence</span>
+<h3 class="font-display text-headline-md uppercase font-black text-black mb-xs">Best UI/UX Design</h3>
+<div class="w-16 h-[4px] bg-black mx-auto my-xs"></div>
+<p class="font-body-md font-bold">Global DevHack 2022</p>
+<p class="font-body-md mt-sm text-outline">Awarded for creating an aggressively brutalist yet highly accessible fintech dashboard.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-[#0A192F] border-t-4 border-black mt-xl"><div class="marquee-container bg-black py-xs border-b-2 border-white/20"><div class="marquee-content text-white font-display text-label-bold uppercase"><span class="mx-lg">Available for Freelance</span><span class="mx-lg">✦</span><span class="mx-lg">Built with Neobrutalism</span><span class="mx-lg">✦</span><span class="mx-lg">2024 Design Portfolio</span><span class="mx-lg">✦</span><span class="mx-lg">Available for Freelance</span><span class="mx-lg">✦</span><span class="mx-lg">Built with Neobrutalism</span><span class="mx-lg">✦</span><span class="mx-lg">2024 Design Portfolio</span></div></div><div class="w-full px-md py-lg flex flex-col md:flex-row items-center justify-between gap-md"><div class="flex items-center gap-sm"><div class="border-2 border-white p-1 rounded-full"><img alt="Profile" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuB4egNwFNhIFqMNctqg3D8z_RqDeyGtZ6utRa53SF_p2BT9uUTgbn-zBpqc-9-Zavdnf2y7-BAtUR81HjRkZFlvQC01Gfs2gxm6SS36rZ5wJApRkIysrHpdBjFYE5ROpCDaiXfTZDXnnX5M-mhvFHrKweeBbGzf5wuiitwWD6WmCTHrlKJbrOSX7TGwLTwtClH89_rLJHQqBa59wSCzT8WFw0Bhp_HjZzNMt0fTEl2r1kHLrxk8wpVogE"></div><div class="text-white"><p class="font-display text-label-bold uppercase">Portfolio Lead</p><p class="font-body-md text-white/60">© 2024 All Rights Reserved</p></div></div><div class="flex items-center gap-sm"><button class="w-12 h-12 flex items-center justify-center bg-white border-2 border-black shadow-[4px_4px_0px_0px_#2559bd] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="material-symbols-outlined">share</span></button><button class="w-12 h-12 flex items-center justify-center bg-white border-2 border-black shadow-[4px_4px_0px_0px_#2559bd] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="material-symbols-outlined">mail</span></button><button class="w-12 h-12 flex items-center justify-center bg-white border-2 border-black shadow-[4px_4px_0px_0px_#2559bd] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="material-symbols-outlined">person</span></button></div></div></footer></body></html>

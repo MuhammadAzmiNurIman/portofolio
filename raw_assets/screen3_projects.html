@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.marquee-container{overflow:hidden;white-space:nowrap;}.marquee-content{display:inline-block;animation:marquee 20s linear infinite;}@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-surface":"#303030","error-container":"#ffdad6","secondary-fixed-dim":"#b9c7e4","on-primary-container":"#a5bdff","outline-variant":"#c3c6d5","surface":"#f9f9f9","surface-container-highest":"#e2e2e2","secondary":"#515f78","primary-fixed":"#dae2ff","on-secondary-fixed":"#0d1c32","on-error-container":"#93000a","tertiary-fixed":"#dbe4e8","tertiary-container":"#464f52","surface-variant":"#e2e2e2","on-error":"#ffffff","on-tertiary":"#ffffff","on-surface":"#1b1b1b","surface-dim":"#dadada","surface-bright":"#f9f9f9","on-tertiary-fixed":"#141d20","inverse-primary":"#b1c5ff","on-background":"#1b1b1b","on-primary":"#ffffff","surface-tint":"#2559bd","on-primary-fixed-variant":"#00419e","inverse-on-surface":"#f1f1f1","tertiary-fixed-dim":"#bfc8cc","background":"#f9f9f9","tertiary":"#2f383b","on-secondary":"#ffffff","surface-container-low":"#f3f3f3","on-tertiary-container":"#b7c0c4","surface-container-lowest":"#ffffff","surface-container-high":"#e8e8e8","on-primary-fixed":"#001946","on-tertiary-fixed-variant":"#3f484b","error":"#ba1a1a","secondary-container":"#d2e0fe","surface-container":"#eeeeee","on-secondary-fixed-variant":"#39475f","outline":"#737784","primary-container":"#0047ab","on-surface-variant":"#434653","secondary-fixed":"#d6e3ff","on-secondary-container":"#55637d","primary-fixed-dim":"#b1c5ff","primary":"#00327d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"32px","base":"4px","gutter":"24px","sm":"16px","xs":"8px","md":"24px","lg":"40px","xl":"64px"},"fontFamily":{"body-lg":["Archivo Narrow"],"headline-lg":["Lexend"],"label-bold":["Archivo Narrow"],"display":["Lexend"],"headline-lg-mobile":["Lexend"],"headline-md":["Lexend"],"body-md":["Archivo Narrow"]},"fontSize":{"body-lg":["18px",{"lineHeight":"1.5","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"1.2","fontWeight":"700"}],"label-bold":["14px",{"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"700"}],"display":["48px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg-mobile":["24px",{"lineHeight":"1.2","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"1.3","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.5","fontWeight":"400"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@100..900&amp;family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"></head><body class="bg-background font-body-md text-on-surface"><header class="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"><div class="h-20 w-full px-md flex items-center justify-between"><div class="flex items-center gap-sm"><div class="border-4 border-black p-1 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"><img alt="Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP7qe9CONC5kZ7n8dyGMqzuRQAlZ4Dlvdi99CEOiOWxmrOAST-7LcIrsjrYelINbvh5ZpGwInmOOGCXa-Dn2J_02WRHr7VNxMD37eEtUlce2UBunDdoHrureT0XJ6brCK2Q_90ErfN8D0Ia5fi3I8jjayr_jK5TbKZs8nObHYkEZ9LF3c8w-zWxWDegtlSduly-mSc11yjWuqAftoJ2D7bPOxTVL987igvf4inv_gRiz6tk80lRIgfwQ"></div><span class="font-display text-headline-md uppercase tracking-tighter">Creative Portfolio</span></div><nav class="hidden md:flex items-center gap-sm" data-active-classes="translate-x-[4px] translate-y-[4px] shadow-none"><a class="bg-primary text-on-primary border-4 border-black px-sm py-2 font-display text-label-bold uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all" data-path="home" href="#">Home</a><a class="bg-primary text-on-primary border-4 border-black px-sm py-2 font-display text-label-bold uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all" data-path="about" href="#">About</a><a aria-current="page" class="bg-primary text-on-primary border-4 border-black px-sm py-2 font-display text-label-bold uppercase transition-all translate-x-[4px] translate-y-[4px] shadow-none" data-path="projects" href="#">Projects</a><a class="bg-primary text-on-primary border-4 border-black px-sm py-2 font-display text-label-bold uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all" data-path="contact" href="#">Contact</a></nav></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full bg-background min-h-screen border-x-4 border-black max-w-[1440px] mx-auto">
+<!-- Hero Section -->
+<section class="w-full bg-primary relative border-b-4 border-black px-md py-xl overflow-hidden flex items-center min-h-[40vh]">
+<!-- Decorative Grid Lines -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<div class="w-full h-full" style="background-image: linear-gradient(to right, #000 2px, transparent 2px), linear-gradient(to bottom, #000 2px, transparent 2px); background-size: 64px 64px;"></div>
+</div>
+<div class="relative z-10 w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-lg">
+<div class="flex flex-col gap-sm max-w-3xl">
+<div class="inline-flex items-center gap-xs bg-white text-on-surface border-4 border-black px-sm py-xs w-max shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+<span class="material-symbols-outlined text-primary">folder_open</span>
+<span class="font-display text-label-bold uppercase tracking-wider">Directory 2024</span>
+</div>
+<h1 class="font-display text-[80px] leading-[0.9] text-on-primary tracking-tighter uppercase drop-shadow-[6px_6px_0px_rgba(0,0,0,1)]">
+                    Project<br>Vault
+                </h1>
+<p class="font-body-lg text-primary-fixed max-w-xl mt-md">
+                    A curated collection of digital experiences, brutalist interfaces, and high-impact functional design experiments.
+                </p>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="bg-secondary-fixed text-on-secondary-fixed border-4 border-black p-sm shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex items-center justify-between w-64">
+<span class="font-display text-label-bold uppercase">Total Works</span>
+<span class="font-display text-headline-md">42</span>
+</div>
+<div class="bg-tertiary-fixed text-on-tertiary-fixed border-4 border-black p-sm shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex items-center justify-between w-64">
+<span class="font-display text-label-bold uppercase">Status</span>
+<div class="flex items-center gap-xs">
+<div class="w-3 h-3 bg-primary border-2 border-black rounded-full animate-pulse"></div>
+<span class="font-display text-headline-md">Active</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter Bar -->
+<section class="w-full bg-white border-b-4 border-black p-md sticky top-20 z-40">
+<div class="flex flex-col md:flex-row justify-between items-center gap-md w-full">
+<div class="flex flex-wrap gap-xs w-full md:w-auto" id="filter-container">
+<button class="filter-btn active bg-primary text-on-primary border-4 border-black px-sm py-xs font-display text-label-bold uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all" data-filter="all">All</button>
+<button class="filter-btn bg-white text-on-surface border-4 border-black px-sm py-xs font-display text-label-bold uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-primary-fixed hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all" data-filter="web">Web Design</button>
+<button class="filter-btn bg-white text-on-surface border-4 border-black px-sm py-xs font-display text-label-bold uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-primary-fixed hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all" data-filter="brand">Branding</button>
+<button class="filter-btn bg-white text-on-surface border-4 border-black px-sm py-xs font-display text-label-bold uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-primary-fixed hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all" data-filter="product">Product UI</button>
+</div>
+<div class="relative w-full md:w-72">
+<input class="w-full bg-surface text-on-surface border-4 border-black pl-10 pr-sm py-xs font-body-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:bg-primary-fixed transition-colors" placeholder="SEARCH PROJECTS..." type="text">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface">search</span>
+</div>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="w-full p-md md:p-xl bg-background">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
+<!-- Card 1 -->
+<article class="project-card flex flex-col bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300" data-category="web">
+<div class="h-64 w-full border-b-4 border-black relative overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bold neobrutalist website homepage for a fintech startup, featuring large black typography on a royal blue background, stark white structural cards, and high contrast geometric shapes. The lighting is flat and graphic. UI mockup style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD-xiiol8eYlQkfA1H7rCujfuVrig1tBdLzLv9hE-KQI6rcn7pHGwjsWvHbVQ8JhvUHk8_BE5y4CfFHwgkMBt6HBfVRpmkzpoGXfrvCIbm7DLGwCycuiICxkHaVPd0T9oSN_y2KVIUXuYpneNcwrtJNIo_-oq8Kuv9IwzzZtsH5DW3htL709O0zUXi5DtQPSZwO0Di1iRHZF_IXf_Zwm0Rt3duc7x8WwHzTf3c9RES-w3zp1OdBchJzw">
+<div class="absolute top-sm right-sm bg-secondary text-on-secondary border-2 border-black px-xs py-1 font-display text-label-bold uppercase rotate-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">2024</div>
+</div>
+<div class="p-md flex flex-col flex-grow gap-sm bg-primary text-on-primary">
+<h2 class="font-display text-headline-lg uppercase truncate">Fintech Terminal</h2>
+<p class="font-body-md line-clamp-3 text-on-primary/90 flex-grow">A high-speed trading interface designed with brutalist principles for maximum clarity and raw functional power.</p>
+<div class="flex flex-wrap gap-xs mt-auto pt-sm border-t-2 border-black">
+<span class="bg-white text-on-surface border-2 border-black px-xs py-1 font-display text-label-bold uppercase text-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">Web Design</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed border-2 border-black px-xs py-1 font-display text-label-bold uppercase text-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">React</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="project-card flex flex-col bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300" data-category="brand">
+<div class="h-64 w-full border-b-4 border-black relative overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A brand identity mockup on rough paper. A chunky, aggressive logo mark printed in royal blue and black ink. Raw, tactile texture with heavy geometric typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUNxw1ET6F5U0pPvvUW3NUe1lCPPioVq5o1qUL8l-kPIj6IsYkbU-YFKe0tzpXBfYGNemIZvV2_RiKb7yPf3---kGNqq7hp3ih7S7hgiuPOGpLOlV6JJYRfGsJ1OiD83Q4wlteDf5JKwk_IevzEzrZkLIygALRpAvvZCM1CWhi92MuobWBJpMiMWhwHcemHfEiH7utjRbHoC1dMvHEwp7GswceV8tfDBm8jvP-CCwy5qAwmcxydk4VSA">
+<div class="absolute top-sm right-sm bg-tertiary text-on-tertiary border-2 border-black px-xs py-1 font-display text-label-bold uppercase -rotate-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">Awarded</div>
+</div>
+<div class="p-md flex flex-col flex-grow gap-sm bg-white text-on-surface">
+<h2 class="font-display text-headline-lg uppercase truncate">Heavy Meta</h2>
+<p class="font-body-md line-clamp-3 flex-grow">Identity system for an underground tech collective. Rejecting subtlety for aggressive scale and unyielding grids.</p>
+<div class="flex flex-wrap gap-xs mt-auto pt-sm border-t-2 border-black">
+<span class="bg-primary text-on-primary border-2 border-black px-xs py-1 font-display text-label-bold uppercase text-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">Branding</span>
+<span class="bg-white text-on-surface border-2 border-black px-xs py-1 font-display text-label-bold uppercase text-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">Print</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="project-card flex flex-col bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300" data-category="product">
+<div class="h-64 w-full border-b-4 border-black relative overflow-hidden group bg-surface-container-high flex items-center justify-center">
+<div class="w-32 h-32 bg-primary border-4 border-black rounded-full shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform duration-500 flex items-center justify-center">
+<div class="w-16 h-16 bg-white border-4 border-black rounded-full"></div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow gap-sm bg-surface-container text-on-surface">
+<h2 class="font-display text-headline-lg uppercase truncate">Data Core UI</h2>
+<p class="font-body-md line-clamp-3 flex-grow">Component library built for high-density information architecture. Utilitarian, scalable, and bold.</p>
+<div class="flex flex-wrap gap-xs mt-auto pt-sm border-t-2 border-black">
+<span class="bg-white text-on-surface border-2 border-black px-xs py-1 font-display text-label-bold uppercase text-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">Product UI</span>
+<span class="bg-primary-fixed text-on-primary-fixed border-2 border-black px-xs py-1 font-display text-label-bold uppercase text-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">Design System</span>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="project-card flex flex-col bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300" data-category="web">
+<div class="h-64 w-full border-b-4 border-black relative overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stark, minimalist e-commerce storefront mockup. Huge black product typography over a pure white background with thick royal blue borders separating the layout into distinct grid cells." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaQIK43d0C9pV7JMDGzL4ruDCAPqpIZGkZ_9bM9DUTuVnyRpMoB3XafP2kmWbstC7C97je7DuaLIPDfS2zGv4LHcZHL3bZceseP6hRecesntBAOdgrtS76okf1QkPuGmBekXRpLE1t-Pv71BTwWTxfqmGePVJxaGLK2wfIEeS0pyia7ZlkRKQhICTFyGSFNTbQGOQYAKqzIeISJK0ou2-0_-z_7me6X7eKtkkirj81GpOP3DsAduviHw">
+</div>
+<div class="p-md flex flex-col flex-grow gap-sm bg-white text-on-surface">
+<h2 class="font-display text-headline-lg uppercase truncate">Block Shop</h2>
+<p class="font-body-md line-clamp-3 flex-grow">E-commerce experience stripping away all decoration to focus purely on product imagery and typography.</p>
+<div class="flex flex-wrap gap-xs mt-auto pt-sm border-t-2 border-black">
+<span class="bg-white text-on-surface border-2 border-black px-xs py-1 font-display text-label-bold uppercase text-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">Web Design</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed border-2 border-black px-xs py-1 font-display text-label-bold uppercase text-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">E-Comm</span>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="project-card flex flex-col bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 md:col-span-2 lg:col-span-2" data-category="product">
+<div class="h-64 w-full border-b-4 border-black relative overflow-hidden group bg-primary">
+<div class="absolute inset-0 flex items-center justify-center p-xl">
+<div class="w-full h-full border-4 border-black bg-white shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -rotate-2 group-hover:rotate-0 transition-transform duration-500 flex flex-col">
+<div class="h-8 border-b-4 border-black flex items-center px-xs gap-xs bg-surface-container">
+<div class="w-3 h-3 border-2 border-black rounded-full bg-error"></div>
+<div class="w-3 h-3 border-2 border-black rounded-full bg-secondary-fixed"></div>
+<div class="w-3 h-3 border-2 border-black rounded-full bg-primary-fixed"></div>
+</div>
+<div class="flex-grow flex p-sm gap-sm">
+<div class="w-1/3 bg-surface border-4 border-black h-full"></div>
+<div class="flex-grow bg-surface border-4 border-black h-full"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow gap-sm bg-secondary text-on-secondary">
+<div class="flex justify-between items-start">
+<h2 class="font-display text-headline-lg uppercase truncate">OS Grid System</h2>
+<span class="material-symbols-outlined text-display">grid_view</span>
+</div>
+<p class="font-body-md line-clamp-3 text-on-secondary/90 flex-grow max-w-2xl">A comprehensive operating system window management framework designed around hard grids, stark contrast, and absolute spatial efficiency.</p>
+<div class="flex flex-wrap gap-xs mt-auto pt-sm border-t-2 border-black">
+<span class="bg-white text-on-surface border-2 border-black px-xs py-1 font-display text-label-bold uppercase text-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">Product UI</span>
+<span class="bg-primary text-on-primary border-2 border-black px-xs py-1 font-display text-label-bold uppercase text-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">System</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Call to Action Banner -->
+<section class="w-full border-y-4 border-black bg-primary-fixed py-xl px-md mt-xl mb-xl relative overflow-hidden flex flex-col items-center text-center">
+<!-- Abstract Shapes -->
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary border-4 border-black rotate-12"></div>
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary border-4 border-black rounded-full -rotate-12"></div>
+<h2 class="font-display text-display text-on-primary-fixed uppercase max-w-3xl relative z-10">Start a new project</h2>
+<p class="font-body-lg text-on-primary-fixed/80 mt-sm mb-lg max-w-xl relative z-10">Currently accepting new commissions for Q3 2024. Let's build something structurally sound.</p>
+<button class="relative z-10 bg-primary text-on-primary border-4 border-black px-xl py-sm font-display text-headline-lg-mobile uppercase shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all flex items-center gap-sm group">
+            Initiate Contact
+            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</section>
+</div>
+<script>
+    // Simple filter logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active classes
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary');
+                    b.classList.add('bg-white', 'text-on-surface');
+                });
+                
+                // Add active classes to clicked
+                btn.classList.remove('bg-white', 'text-on-surface');
+                btn.classList.add('bg-primary', 'text-on-primary');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projects.forEach(project => {
+                    if (filter === 'all' || project.getAttribute('data-category') === filter) {
+                        project.style.display = 'flex';
+                        // Simple reset animation
+                        project.style.animation = 'none';
+                        project.offsetHeight; /* trigger reflow */
+                        project.style.animation = null;
+                        project.classList.add('animate-[fadeIn_0.3s_ease-out]');
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style></main><footer class="w-full bg-[#0A192F] border-t-4 border-black mt-xl"><div class="marquee-container bg-black py-xs border-b-2 border-white/20"><div class="marquee-content text-white font-display text-label-bold uppercase"><span class="mx-lg">Available for Freelance</span><span class="mx-lg">✦</span><span class="mx-lg">Built with Neobrutalism</span><span class="mx-lg">✦</span><span class="mx-lg">2024 Design Portfolio</span><span class="mx-lg">✦</span><span class="mx-lg">Available for Freelance</span><span class="mx-lg">✦</span><span class="mx-lg">Built with Neobrutalism</span><span class="mx-lg">✦</span><span class="mx-lg">2024 Design Portfolio</span></div></div><div class="w-full px-md py-lg flex flex-col md:flex-row items-center justify-between gap-md"><div class="flex items-center gap-sm"><div class="border-2 border-white p-1 rounded-full"><img alt="Profile" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuB4egNwFNhIFqMNctqg3D8z_RqDeyGtZ6utRa53SF_p2BT9uUTgbn-zBpqc-9-Zavdnf2y7-BAtUR81HjRkZFlvQC01Gfs2gxm6SS36rZ5wJApRkIysrHpdBjFYE5ROpCDaiXfTZDXnnX5M-mhvFHrKweeBbGzf5wuiitwWD6WmCTHrlKJbrOSX7TGwLTwtClH89_rLJHQqBa59wSCzT8WFw0Bhp_HjZzNMt0fTEl2r1kHLrxk8wpVogE"></div><div class="text-white"><p class="font-display text-label-bold uppercase">Portfolio Lead</p><p class="font-body-md text-white/60">© 2024 All Rights Reserved</p></div></div><div class="flex items-center gap-sm"><button class="w-12 h-12 flex items-center justify-center bg-white border-2 border-black shadow-[4px_4px_0px_0px_#2559bd] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="material-symbols-outlined">share</span></button><button class="w-12 h-12 flex items-center justify-center bg-white border-2 border-black shadow-[4px_4px_0px_0px_#2559bd] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="material-symbols-outlined">mail</span></button><button class="w-12 h-12 flex items-center justify-center bg-white border-2 border-black shadow-[4px_4px_0px_0px_#2559bd] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="material-symbols-outlined">person</span></button></div></div></footer></body></html>
