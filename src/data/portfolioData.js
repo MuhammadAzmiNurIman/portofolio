@@ -18,10 +18,10 @@ export const portfolioData = {
     totalWorks: 42,
     status: "Active",
     socials: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      instagram: "https://instagram.com",
-      discord: "https://discord.com"
+      github: "https://github.com/MuhammadAzmiNurIman",
+      linkedin: "https://www.linkedin.com/in/muhammadazminuriman/",
+      instagram: "https://www.instagram.com/azmiii.ii/",
+      discord: "https://discordapp.com/users/694038479537176646"
     }
   },
 
@@ -466,9 +466,9 @@ export const portfolioData = {
         }
       ],
 
-      liveUrl: "...",
+      liveUrl: "https://hismaya.com/",
 
-      sourceUrl: "..."
+      sourceUrl: "https://github.com/solveit-id/hismaya"
     }
   ]
 };
