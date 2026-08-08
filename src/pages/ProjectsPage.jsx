@@ -118,60 +118,54 @@ export function ProjectsPage({ onSelectProject }) {
             </button>
           </div>
         ) : (
-          <motion.div
-            layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl"
-          >
-            <AnimatePresence>
-              {filteredProjects.map((project) => (
-                <motion.article
-                  key={project.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  whileHover={{ y: -8 }}
-                  onClick={() => onSelectProject(project)}
-                  className="flex flex-col bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 cursor-pointer group"
-                >
-                  <div className="h-64 w-full border-b-4 border-black relative overflow-hidden bg-surface-container-high">
-                    <img
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      src={project.heroImage}
-                    />
-                    <div className="absolute top-sm right-sm bg-secondary text-white border-2 border-black px-xs py-1 font-display font-bold text-xs uppercase rotate-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                      {project.year}
-                    </div>
-                    {project.badge && (
-                      <div className="absolute top-sm left-sm bg-tertiary text-white border-2 border-black px-xs py-1 font-display font-bold text-xs uppercase -rotate-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                        {project.badge}
-                      </div>
-                    )}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
+            {filteredProjects.map((project) => (
+              <motion.article
+                key={project.id}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                whileHover={{ y: -8 }}
+                onClick={() => onSelectProject(project)}
+                className="flex flex-col bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 cursor-pointer group"
+              >
+                <div className="h-64 w-full border-b-4 border-black relative overflow-hidden bg-surface-container-high">
+                  <img
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    src={project.heroImage}
+                  />
+                  <div className="absolute top-sm right-sm bg-secondary text-white border-2 border-black px-xs py-1 font-display font-bold text-xs uppercase rotate-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    {project.year}
                   </div>
+                  {project.badge && (
+                    <div className="absolute top-sm left-sm bg-tertiary text-white border-2 border-black px-xs py-1 font-display font-bold text-xs uppercase -rotate-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                      {project.badge}
+                    </div>
+                  )}
+                </div>
 
-                  <div className="p-md flex flex-col flex-grow gap-sm bg-white text-on-surface">
-                    <h2 className="font-display text-2xl font-extrabold uppercase text-black truncate">
-                      {project.title}
-                    </h2>
-                    <p className="font-body text-secondary text-sm line-clamp-3 flex-grow leading-relaxed">
-                      {project.summary}
-                    </p>
-                    <div className="flex flex-wrap gap-xs mt-auto pt-sm border-t-2 border-black">
-                      <span className="bg-primary text-white border-2 border-black px-2 py-1 font-display font-bold text-[10px] uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                        {project.categoryName}
+                <div className="p-md flex flex-col flex-grow gap-sm bg-white text-on-surface">
+                  <h2 className="font-display text-2xl font-extrabold uppercase text-black truncate">
+                    {project.title}
+                  </h2>
+                  <p className="font-body text-secondary text-sm line-clamp-3 flex-grow leading-relaxed">
+                    {project.summary}
+                  </p>
+                  <div className="flex flex-wrap gap-xs mt-auto pt-sm border-t-2 border-black">
+                    <span className="bg-primary text-white border-2 border-black px-2 py-1 font-display font-bold text-[10px] uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                      {project.categoryName}
+                    </span>
+                    {project.tags.slice(0, 2).map((tag, idx) => (
+                      <span key={idx} className="bg-secondary-fixed text-black border-2 border-black px-2 py-1 font-display font-bold text-[10px] uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                        {tag}
                       </span>
-                      {project.tags.slice(0, 2).map((tag, idx) => (
-                        <span key={idx} className="bg-secondary-fixed text-black border-2 border-black px-2 py-1 font-display font-bold text-[10px] uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    ))}
                   </div>
-                </motion.article>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         )}
       </section>
     </div>

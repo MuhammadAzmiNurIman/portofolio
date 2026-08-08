@@ -86,14 +86,14 @@ export function App() {
 
       {/* Main Page Area */}
       <main className="w-full pt-20 flex-grow">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {activeTab === 'home' && (
             <motion.div
               key="home"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
               <HomePage
                 onNavigate={handleNavigate}
@@ -109,7 +109,7 @@ export function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
               <AboutPage
                 onNavigate={handleNavigate}
@@ -124,7 +124,7 @@ export function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
               <ProjectsPage
                 onSelectProject={handleSelectProject}
@@ -138,7 +138,7 @@ export function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
               <ProjectDetailPage
                 project={selectedProject}
