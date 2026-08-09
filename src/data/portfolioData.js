@@ -210,26 +210,30 @@ export const portfolioData = {
         "Built a responsive admin dashboard for managing products, users, orders, stores, and business operations while maintaining relational database consistency."
       ],
 
-      heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuBXglsvji4zaE8pgSjdt2GgvOW3fEni1dU5t7kU3j7QMgI5ABqyJrivC-RBwuJJCU-XbZ6xZLL5A40XKQqhW2fHumsaffYVlvhptZe6xbaRGBJYGubnsBug3dUWoiDgYgLVfS-34bAVf2trt6zdaWT-Dae7w4Q4WvHuMRanZvIjUQMSsfBB1I9AJFtOMTGN-yJP-fjzoC2SZPU6PdEPmvNzcQV_s9325mQb35Ub28TdYIeNfGIM6aEgPA",
+      heroImage: "/umkm_mojorejo/1.png",
 
       gallery: [
         {
-          title: "Bento Dashboard View",
-          url: "https://lh3.googleusercontent.com/aida-public/AB6AXuBXglsvji4zaE8pgSjdt2GgvOW3fEni1dU5t7kU3j7QMgI5ABqyJrivC-RBwuJJCU-XbZ6xZLL5A40XKQqhW2fHumsaffYVlvhptZe6xbaRGBJYGubnsBug3dUWoiDgYgLVfS-34bAVf2trt6zdaWT-Dae7w4Q4WvHuMRanZvIjUQMSsfBB1I9AJFtOMTGN-yJP-fjzoC2SZPU6PdEPmvNzcQV_s9325mQb35Ub28TdYIeNfGIM6aEgPA"
+          title: "Marketplace Dashboard",
+          url: "/umkm_mojorejo/1.png"
         },
         {
-          title: "Data Visualization Component",
-          url: "https://lh3.googleusercontent.com/aida-public/AB6AXuCDPsQxB567CbKpImMV6uvUXhELAOmM6FOPKMKmHmIMUfnNlD2e8wuhmh3tRXwJUd34WrOZgAX43HlxiG0WKzh4ROq9RQ0RKavg-QQReV7lxMr8Tf6TndbEpHX1_3GS9fJWYgp7Z2f7wVazWGJbW4hTZVzOzueGEbheYEgLbpz9PnuhTZf9qhbjlDq0eaWS4SY_YrDCxh7EY9ZgPTjZAlm2Pv5XgJ7AhufEIymd2oPzj77Q0R6dcIg-sw"
+          title: "UMKM Product Catalog",
+          url: "/umkm_mojorejo/2.png"
         },
         {
-          title: "Filtering & Navigation Drawer",
-          url: "https://lh3.googleusercontent.com/aida-public/AB6AXuAndH4AMwdgjMD1D4sKhQ4AAWJ4BMnquDUyr24_doldloDfcrF_sg1V8fFZ7PGTK7xVYjbr9cKJlhB5vhqCky36beJS3pc3tWK1CVRVXBrnl5SIJOOFw7IEHvBYHfQunVK9rHkEvSP7ceM_jyIMqtcpWWqunA_Tu7SNVpKDprZkd6wTWILF9ZBV3ipzhLZyLXYcZSS54nWzoqCW2yzhO6yxN9NGCs7xF12U1Sjt4nIppalQDxF5r1lItg"
+          title: "Product Information & Detail",
+          url: "/umkm_mojorejo/3.png"
+        },
+        {
+          title: "Virtual Account Checkout",
+          url: "/umkm_mojorejo/4.png"
         }
       ],
 
       liveUrl: "...",
 
-      sourceUrl: "..."
+      sourceUrl: "https://github.com/MuhammadAzmiNurIman/umkm_mojorejo"
     },
     {
       id: "incident-handling",
