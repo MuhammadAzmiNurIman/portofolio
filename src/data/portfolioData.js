@@ -363,7 +363,7 @@ export const portfolioData = {
 
       category: "web",
 
-      categoryName: "Frontend & UI/UX",
+      categoryName: "Full Stack Web",
 
       year: "2025",
 
@@ -372,24 +372,26 @@ export const portfolioData = {
         "Tailwind CSS",
         "JavaScript",
         "Figma",
-        "UI/UX"
+        "UI/UX",
+        "Docker",
+        "Blog CMS"
       ],
 
-      role: "Front-End Developer & UI/UX Designer",
+      role: "Full Stack Developer & UI/UX Designer",
 
       timeline: "1 Month",
 
       client: "Govind Abra Enterprise",
 
       summary:
-        "Corporate website focused on improving company branding through responsive and modern web design.",
+        "A full-stack corporate website built with Laravel, featuring a responsive user interface, integrated blog CMS, and containerized development environment.",
 
       overview: [
-        "Developed responsive company profile pages.",
+        "Designed and developed responsive company profile pages using Tailwind CSS and JavaScript, with a focus on clear navigation, usability, and consistent visual presentation.",
 
-        "Designed user-friendly layouts and interactive components.",
+        "Developed the backend using Laravel, including a blog content management system for managing articles, categories, and website content.",
 
-        "Improved navigation, user experience, and website responsiveness."
+        "Configured Docker to support a consistent and isolated development environment for the Laravel application and its backend services."
       ],
 
       heroImage: "/govind/1.png",
@@ -408,7 +410,7 @@ export const portfolioData = {
           url: "/govind/3.png"
         },
         {
-          title: "Content Management",
+          title: "Blog Content Management",
           url: "/govind/4.png"
         }
       ],
@@ -426,31 +428,33 @@ export const portfolioData = {
 
       category: "web",
 
-      categoryName: "React Development",
+      categoryName: "Full Stack Web",
 
       year: "2025",
 
       tags: [
-        "React.js",
         "Next.js",
-        "Tailwind CSS"
+        "React.js",
+        "Tailwind CSS",
+        "Blog CMS",
+        "Analytics"
       ],
 
-      role: "Front-End Developer & UI/UX Designer",
+      role: "Full Stack Developer & UI/UX Designer",
 
       timeline: "1 Month",
 
       client: "Hismaya",
 
       summary:
-        "A responsive company profile website built with React.js and Next.js to enhance digital presence.",
+        "A full-stack company profile website built with Next.js, featuring a responsive frontend, integrated blog CMS, and visitor analytics.",
 
       overview: [
-        "Developed reusable React components.",
+        "Designed and developed responsive user interfaces using React.js, Next.js, and Tailwind CSS with a focus on usability and consistent visual presentation.",
 
-        "Implemented responsive layouts and modern user interfaces.",
+        "Developed the backend functionality using Next.js, including a blog content management system (CMS) for managing articles and website content.",
 
-        "Optimized website performance using Next.js rendering features."
+        "Implemented visitor statistics to monitor website traffic and provide insights into user visits and content performance."
       ],
 
       heroImage: "/hismaya/1.png",
@@ -465,7 +469,7 @@ export const portfolioData = {
           url: "/hismaya/2.png"
         },
         {
-          title: "Content Management",
+          title: "Blog Content Management",
           url: "/hismaya/3.png"
         }
       ],
