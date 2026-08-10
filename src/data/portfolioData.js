@@ -180,7 +180,7 @@ export const portfolioData = {
       subtitle: "Cisco Networking Academy • Universitas Negeri Malang • Apr - May 2023",
       description:
         "Completed Cisco Networking Academy's IT Essentials training covering computer installation, configuration, maintenance, troubleshooting, LAN networking fundamentals, device security, printer installation, and technical support procedures.",
-      icon: "verified",
+      icon: "workspace_premium",
       bgColor: "bg-primary-fixed text-black"
     }
   ],
