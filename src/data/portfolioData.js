@@ -125,8 +125,8 @@ export const portfolioData = {
     {
       id: "wh-1",
       role: "Freelance Frontend Developer",
-      company: "Solveit",
-      period: "2025 - Present",
+      company: "Solveit Indonesia",
+      period: "2025 - 2026",
       description:
         "Developed responsive web interfaces using React.js and Tailwind CSS, collaborated with backend developers to integrate REST APIs, optimized application performance across devices, and improved usability through testing and user feedback.",
       active: true
