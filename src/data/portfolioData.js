@@ -172,6 +172,16 @@ export const portfolioData = {
         "Certified in Occupational Safety and Health (K3), demonstrating competency in workplace safety awareness, risk management, and the implementation of occupational health and safety practices.",
       icon: "verified",
       bgColor: "bg-tertiary-fixed text-black"
+    },
+    {
+      id: "ea-4",
+      category: "IT Support Training",
+      title: "IT Essentials",
+      subtitle: "Cisco Networking Academy • Universitas Negeri Malang • Apr - May 2023",
+      description:
+        "Completed Cisco Networking Academy's IT Essentials training covering computer installation, configuration, maintenance, troubleshooting, LAN networking fundamentals, device security, printer installation, and technical support procedures.",
+      icon: "computer",
+      bgColor: "bg-primary-fixed text-black"
     }
   ],
 
