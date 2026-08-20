@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ContactModal } from './components/ContactModal';
+import { ChatbotWidget } from './components/ChatbotWidget';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ProjectsPage } from './pages/ProjectsPage';
@@ -158,6 +159,13 @@ export function App() {
       <ContactModal
         isOpen={contactOpen}
         onClose={() => setContactOpen(false)}
+      />
+
+      {/* Floating Chatbot Widget */}
+      <ChatbotWidget
+        onOpenContact={() => setContactOpen(true)}
+        onNavigate={handleNavigate}
+        onSelectProject={handleSelectProject}
       />
     </div>
   );

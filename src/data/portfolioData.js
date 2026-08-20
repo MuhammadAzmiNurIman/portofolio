@@ -487,6 +487,67 @@ export const portfolioData = {
       liveUrl: "https://hismaya.com/",
 
       sourceUrl: "https://github.com/solveit-id/hismaya"
+    },
+
+    {
+      id: "webscan",
+
+      slug: "webscan",
+
+      title: "WebScan - Smart Product Scanner",
+
+      category: "web",
+
+      categoryName: "Full Stack Web",
+
+      year: "2026",
+
+      tags: [
+        "Next.js",
+        "React.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Prisma",
+        "Tesseract.js"
+      ],
+
+      role: "Full Stack Developer & UI/UX Designer",
+
+      timeline: "1 Month",
+
+      client: "Personal Project",
+
+      summary:
+        "A mobile-first product scanner app that identifies products through real-time barcode detection, OCR, and visual photo matching using perceptual image hashing.",
+
+      overview: [
+        "Built a mobile-first product scanner with multiple recognition modes: real-time barcode detection via the BarcodeDetector API, OCR fallback using Tesseract.js, manual code entry, and product name search.",
+
+        "Implemented visual photo matching that compares a camera shot against product photos in the database using DCT perceptual hashing, fine color histograms, and average-color signatures to rank the most similar products.",
+
+        "Developed a password-protected admin panel for managing products, prices, stock status, aisles, and photos, backed by Prisma ORM and PostgreSQL, plus persisted scan history and a shopping list."
+      ],
+
+      heroImage: "/webscan/1.png",
+
+      gallery: [
+        {
+          title: "Camera Scanner & Product Result",
+          url: "/webscan/1.png"
+        },
+        {
+          title: "Search & Photo Matching",
+          url: "/webscan/3.png"
+        },
+        {
+          title: "Admin Product Management",
+          url: "/webscan/2.png"
+        }
+      ],
+
+      liveUrl: "https://scanproduk-nu23-ir26n3qxe-langit2.vercel.app/scan",
+
+      sourceUrl: "https://github.com/MuhammadAzmiNurIman/scanproduk"
     }
   ]
 };
